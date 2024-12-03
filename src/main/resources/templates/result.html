@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/main.css}" rel="stylesheet"/>
+</head>
+<body>
+<h1>Result</h1>
+
+
+<table>
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <tr>
+        <th scope="col" class="px-6 py-3">
+            Name
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Age
+        </th>
+        <th scope="col" class="px-6 py-3">
+            Number
+        </th>
+
+    </tr>
+    </thead>
+</table>
+<div th:each="student : ${students}">
+
+    <div class="">
+
+        <table class="table-auto text-sm text-center text-gray-500 dark:text-gray-400">
+
+            <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <p th:text="${student.name}" />
+                </th>
+                <td class="px-6 py-4">
+                    <p th:text="${student.age}" />
+                </td>
+                <td class="px-6 py-4">
+                    <p th:text="${student.number}" />
+                </td>
+
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+<a href="/">Add Student</a>
+</body>
+</html>

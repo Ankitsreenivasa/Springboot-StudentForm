@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/main.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<div>
+<!--    <form action="/student/all">-->
+        <form action="#" th:action="@{/student/all}" th:object="${student}" method="post">
+
+        <section class="text-gray-400 bg-gray-900 body-font relative">
+            <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+
+                <div class="flex flex-col md:w-1/2 md:py-8 mt-8 md:mt-0">
+                    <h2 class="text-white text-lg mb-1 font-medium title-font">Student Form</h2>
+                    <p class="leading-relaxed mb-5">Please fill all the student details</p>
+                    <div class="relative mb-4">
+                        <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+                        <input type="text" id="name" name="name"
+                               class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="age" class="leading-7 text-sm text-gray-400">Age</label>
+                        <input type="number" id="age" name="age"
+                               class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="number" class="leading-7 text-sm text-gray-400">Number</label>
+                        <input type="number" id="number" name="number"
+                               class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">
+                        Submit
+                    </button>
+                    <p class="text-xs text-gray-400 text-opacity-90 mt-3">All Students must fill this for in order to
+                        access the student details.</p>
+                </div>
+            </div>
+        </section>
+    </form>
+</div>
+</body>
+</html>
